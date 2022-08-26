@@ -1,0 +1,7 @@
+F:/Clion/Project/cmake-build-debug/CMakeFiles/Project.dir
+F:/Clion/Project/cmake-build-debug/CMakeFiles/Test.dir
+F:/Clion/Project/cmake-build-debug/CMakeFiles/Test1.dir
+F:/Clion/Project/cmake-build-debug/CMakeFiles/Test2.dir
+F:/Clion/Project/cmake-build-debug/CMakeFiles/Test4.dir
+F:/Clion/Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Clion/Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
