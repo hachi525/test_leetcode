@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// 转换成整数最大的回文串
 class Solution {
 public:
     string largestPalindromic(string num) {
