@@ -19,9 +19,24 @@ vector<int> L1331_arrayRankTransform::arrayRankTransform(vector<int> &arr) {
     return res;
 }
 
+class Solution{
+public:
+    vector<int> arrayRankTransform(vector<int>& arr){
+        int n  = arr.size();
+        for(int i = 0; i < n; i ++){
+            int j = i < n ? 2 * i : 2 * (i-n) + 1;
+            arr[j] |= (arr[i] & 1023) << 10 ;
+        }
+        for(auto& e : arr){
+            e = e >> 10;
+        }
+        return arr;
+    }
+};
+
 void discretization(vector<int>& nums){
     sort(nums.begin()+1, nums.begin()+1+nums.size());
-    unique()
+
 
 
 }

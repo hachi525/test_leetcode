@@ -55,13 +55,13 @@ public:
         nums.insert(num);
         if (!n) {   // 集合为空
             left = right = nums.begin();
-        } else if (n & 1) { // 插入后集合有偶数个数字
+        } else if (n & 1) { // 插入前集合有偶数个数字
             if (num < *left) {
                 left--;
             } else {
                 right++;
             }
-        } else {    // 插入后集合后有奇数个数字
+        } else {    // 插入前集合有奇数个数字
             if (num > *left && num < *right) {
                 left++;
                 right--;
