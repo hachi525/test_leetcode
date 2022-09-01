@@ -250,6 +250,7 @@ bool testInput(){
     while(getline(fin, fs)){
         cout << "Read from file : " << fs << endl;
     }
+    fin.close();
 
     /* 3.从文件中逐词读取并写入vector容器中 */
     ifstream infile;
@@ -273,6 +274,7 @@ bool testInput(){
             cout << *it << endl;
             it++;
         }
+        infile.close();
     };
     fileToVectorByWord();
 
@@ -310,7 +312,7 @@ int main() {
 //    sparse_popcnt();
 //    _builtin_popcount_
 
-    /* 7.测试getline输入 */
+    /* 7.测试流输入 */
     cout << boolalpha << testInput() << endl;
 
     return 0;

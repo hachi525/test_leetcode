@@ -175,6 +175,12 @@ build CMakeFiles/Test1.dir/L782_movesToChessboard.cpp.obj: CXX_COMPILER__Test1_D
   OBJECT_DIR = CMakeFiles\Test1.dir
   OBJECT_FILE_DIR = CMakeFiles\Test1.dir
 
+build CMakeFiles/Test1.dir/L793_premiageSize.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/L793_premiageSize.cpp || cmake_object_order_depends_target_Test1
+  DEP_FILE = CMakeFiles\Test1.dir\L793_premiageSize.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Test1.dir
+  OBJECT_FILE_DIR = CMakeFiles\Test1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Test1
@@ -183,7 +189,7 @@ build CMakeFiles/Test1.dir/L782_movesToChessboard.cpp.obj: CXX_COMPILER__Test1_D
 #############################################
 # Link the executable Test1.exe
 
-build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L565_arrayNesting.cpp.obj CMakeFiles/Test1.dir/socketTest.cpp.obj CMakeFiles/Test1.dir/L782_movesToChessboard.cpp.obj
+build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L565_arrayNesting.cpp.obj CMakeFiles/Test1.dir/socketTest.cpp.obj CMakeFiles/Test1.dir/L782_movesToChessboard.cpp.obj CMakeFiles/Test1.dir/L793_premiageSize.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test1.dir
@@ -235,8 +241,8 @@ build Test2.exe: CXX_EXECUTABLE_LINKER__Test2_Debug CMakeFiles/Test2.dir/Test.cp
 
 build cmake_object_order_depends_target_Test4: phony || CMakeFiles/Test4.dir
 
-build CMakeFiles/Test4.dir/huawei_minGraphLength.cpp.obj: CXX_COMPILER__Test4_Debug F$:/Clion/Project/huawei_minGraphLength.cpp || cmake_object_order_depends_target_Test4
-  DEP_FILE = CMakeFiles\Test4.dir\huawei_minGraphLength.cpp.obj.d
+build CMakeFiles/Test4.dir/L2102_SORTracker.cpp.obj: CXX_COMPILER__Test4_Debug F$:/Clion/Project/L2102_SORTracker.cpp || cmake_object_order_depends_target_Test4
+  DEP_FILE = CMakeFiles\Test4.dir\L2102_SORTracker.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Test4.dir
   OBJECT_FILE_DIR = CMakeFiles\Test4.dir
@@ -249,7 +255,7 @@ build CMakeFiles/Test4.dir/huawei_minGraphLength.cpp.obj: CXX_COMPILER__Test4_De
 #############################################
 # Link the executable Test4.exe
 
-build Test4.exe: CXX_EXECUTABLE_LINKER__Test4_Debug CMakeFiles/Test4.dir/huawei_minGraphLength.cpp.obj
+build Test4.exe: CXX_EXECUTABLE_LINKER__Test4_Debug CMakeFiles/Test4.dir/L2102_SORTracker.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test4.dir
