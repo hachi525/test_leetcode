@@ -202,8 +202,8 @@ build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L565_ar
 
 build cmake_object_order_depends_target_Test2: phony || CMakeFiles/Test2.dir
 
-build CMakeFiles/Test2.dir/xiecheng_pinghuazhi.cpp.obj: CXX_COMPILER__Test2_Debug F$:/Clion/Project/xiecheng_pinghuazhi.cpp || cmake_object_order_depends_target_Test2
-  DEP_FILE = CMakeFiles\Test2.dir\xiecheng_pinghuazhi.cpp.obj.d
+build CMakeFiles/Test2.dir/Test.cpp.obj: CXX_COMPILER__Test2_Debug F$:/Clion/Project/Test.cpp || cmake_object_order_depends_target_Test2
+  DEP_FILE = CMakeFiles\Test2.dir\Test.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Test2.dir
   OBJECT_FILE_DIR = CMakeFiles\Test2.dir
@@ -216,7 +216,7 @@ build CMakeFiles/Test2.dir/xiecheng_pinghuazhi.cpp.obj: CXX_COMPILER__Test2_Debu
 #############################################
 # Link the executable Test2.exe
 
-build Test2.exe: CXX_EXECUTABLE_LINKER__Test2_Debug CMakeFiles/Test2.dir/xiecheng_pinghuazhi.cpp.obj
+build Test2.exe: CXX_EXECUTABLE_LINKER__Test2_Debug CMakeFiles/Test2.dir/Test.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test2.dir

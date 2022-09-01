@@ -2,6 +2,7 @@
 // Created by admin on 2022/7/28.
 //
 
+
 #include "Test.h"
 
 class Test{
@@ -61,6 +62,8 @@ void test(){
     cout << "\n---------------------------\n测试array: \n"  << get<1>(arr) << ", ";
 }
 
+
+/* 测试函数指针，作为形参传入 */
 int fun1(int i, int j){
     cout << i  << j ;
     return 1;
@@ -70,6 +73,7 @@ void fun2(int (*fun1)(int i, int j), int a){
     (*fun1)(1,2);
 }
 
+/* 测试成员变量初始化顺序 */
 class Base{
 private:
     int  m_i, m_j;
@@ -84,6 +88,7 @@ public:
     };
 };
 
+/* 统计n二进制中1的个数 */
 unsigned popcnt(unsigned n){
     unsigned count = 0;
     while(n){
@@ -153,70 +158,139 @@ unsigned popcnt(unsigned n){
 //    }
 //};
 
-//class A{
-//protected:
-//    int a = 5;
-//public:
-//    A(){ cout << "A.a = " << a << endl; };
-//};
-//
-//class B:virtual public A{
-//public:
-//    B(){ cout << "B::a = " << a << endl;};
-//};
-//
-//class C:public B{
-//public:
-//    C(){a+=5; cout << "C::a = " << a << endl;};
-//};
-//
-//class D:public B{
-//public:
-//    D(){a+=13; cout << "D::a = " << a << endl;};
-//};
+
+bool testInput(){
+    std::string str;
+    char delim = ',';
+    stringstream ss;
+    str = "123, 456";
+    ss.str(str);
+
+    ///测试getline()
+    /* 测试while(getline())按行循环输入 */
+    // istream& getline ( istream &is , string &str , char delim );
+    while(getline(std::cin, str, delim)){
+        cout << "str: " << str << endl;
+        if(str == "exit") {
+            cout << "isequal: " << (str == "exit") << endl;
+            break;
+        }
+        cout << "str's num: " << stoi(str) << ", type: " << typeid(stoi(str)).name() << endl;
 
 
-class A{
-
-public:
-    int i;
-    A():i(5){};
-};
-
-class B: virtual public A{
-public:
-    B(){i += 5;};
-};
-
-class C: virtual public A{
-public:
-    C(){i+=10; cout << " C.i =  " <<  i << endl;}
-};
-
-class D:public B, public C{
-public:
-    D(){
-        cout << A::i <<endl;
-        cout << B::i << endl;
-        cout << C::i <<endl;
     }
-};
+
+
+    /// 测试stringstream
+    /* 1.istringstream
+     * 2.ostringstream
+     * 3.stringstream
+     *  `数据类型转换
+     *  `字符串拼接+清空
+     * */
+    // 1.istringstream
+    // istringstream 只支持 >> 操作符
+    istringstream iss;
+    function<string()> issTest = [&iss]()->string {
+        string line;
+        string word;
+        while(getline(cin, line)){
+            iss.str(line);  //从line中读取字符
+                while(iss >> word){
+                cout << " word = " << word << endl;
+            }
+        }
+    };
+    // 2.ostringstream
+    // ostringstream 只支持 << 操作符
+    ostringstream oss;
+    function<void()> ossTest = [&oss]()->void{
+        string str = "Test ostringstream";
+        oss.str(str);   // oss.str(str); === oss << str;
+        str = oss.str() + "123";         // str = oss.str(); === oss >> str;
+
+
+    };
+
+
+    // 3.stringstream
+    stringstream sstream;
+    int num = 123;
+    sstream << num; // int转换为string
+    string s = "123456";
+    sstream >> s;   // s变为字符串"123"
+    sstream.clear();
+    // 作为输入流istringstream
+    sstream << s << "789";  // 使用stringstream拼接字符串
+    string a;
+    // 作为输出流ostringstream
+    sstream >> a;
+    cout << "a = " << a << ", s = " << s << endl;
+    sstream.str("");    //清空sstream：相当于用空字符串""代替原本的字符串内容
+    sstream.clear();
+
+    /* 测试stringstream中内容输出以后是否还能再次输出 */
+    stringstream mm;
+    mm << "baab";
+    string m, n;
+    mm >> m;
+    cout << " , m = " << m; // 此时m = “baab”
+    mm >> n;
+    cout << " , n = " << n; // 此时n = “”
+
+    /// 测试文件输入
+    /* 1.从文件中逐词读取 */
+    ifstream fin("");   // 参数为文件所在路径
+    string fs;
+    while(fin >> fs){
+        cout << "Read from file: " << fs << endl;
+    }
+
+    /* 2.文件中逐行读取 */
+    while(getline(fin, fs)){
+        cout << "Read from file : " << fs << endl;
+    }
+
+    /* 3.从文件中逐词读取并写入vector容器中 */
+    ifstream infile;
+    // 使用匿名函数+function函数对象在函数内部定义函数
+    function<void()> fileToVectorByWord = [&infile]()->void {
+        infile.open("");
+        if(!infile){    //  异常判断
+            cout << "error : cannot open the file" << endl;
+        }
+
+        vector<string> v;
+        string s;
+        while(!infile.eof()){
+            infile >> s;
+            v.push_back(s);
+        }
+
+        // 验证是否读入到vector中
+        vector<string>::const_iterator it = v.begin();
+        while(it != v.end()){
+            cout << *it << endl;
+            it++;
+        }
+    };
+    fileToVectorByWord();
+
+    return true;
+}
 
 int main() {
     /*1.任何成员对象的构造函数按照声明顺序初始化*/
 //    Base obj(98);
 //    cout<< obj.get_j()<< " , "  << obj.get_i() ;
 
-//    /* 2.虚基类测试*/
+    /* 2.虚基类测试*/
 //    C temp1;
 //    cout << "C结束" <<endl;
-    D temp ;
-    cout << "D结束" << temp.i << endl;
+//    D temp ;
+//    cout << "D结束" << temp.i << endl;
 
-    C c;
-    cout << "c over" << c.i << endl;
-
-//    3.测试unordered_map
+//    /* 3.测试unordered_map */
 //    test();
 
     /* 4.函数指针 */
@@ -235,6 +309,9 @@ int main() {
 //    cout << boolalpha << (bool)(hash<int>()(5) == hash<int >()(2));
 //    sparse_popcnt();
 //    _builtin_popcount_
+
+    /* 7.测试getline输入 */
+    cout << boolalpha << testInput() << endl;
 
     return 0;
 }

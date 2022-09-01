@@ -7,14 +7,17 @@
 #ifndef _Test_H_
 #define _Test_H_
 
-
+#include <sstream>
 #include <iostream>
+#include <fstream>
+
 #include <vector>
 #include <algorithm>
 #include <list>
 #include <array>
 #include <unordered_map>
 #include <functional>
+
 
 using namespace std;
 
