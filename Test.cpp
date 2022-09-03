@@ -221,10 +221,14 @@ bool testInput(){
     sstream >> s;   // s变为字符串"123"
     sstream.clear();
     // 作为输入流istringstream
-    sstream << s << "789";  // 使用stringstream拼接字符串
+    sstream << s << ",789";  // 使用stringstream拼接字符串
     string a;
     // 作为输出流ostringstream
-    sstream >> a;
+//    sstream >> a;
+    getline(sstream, a, ',');   //可以使用分割符对sstream分段输出
+    string b;
+    sstream >> b;
+    cout << "b = " << b << endl;
     cout << "a = " << a << ", s = " << s << endl;
     sstream.str("");    //清空sstream：相当于用空字符串""代替原本的字符串内容
     sstream.clear();

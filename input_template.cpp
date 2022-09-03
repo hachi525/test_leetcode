@@ -5,8 +5,14 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+
 #include <algorithm>
+
 #include <vector>
+#include <queue>
+
+#include "Ds_binaryTree.h"
+
 
 using namespace std;
 
@@ -73,6 +79,7 @@ string integerVectorToString(vector<int> list, int length = -1) { // vector<int>
         return "[]";
     }
 
+    // 以数组形式字符串输出，如[1, 2, 3, 4, 5]
     string result;
     for(int index = 0; index < length; index++) {
         int number = list[index];
@@ -82,6 +89,53 @@ string integerVectorToString(vector<int> list, int length = -1) { // vector<int>
     return "[" + result.substr(0, result.length() - 2) + "]";
 }
 
+TreeNode* stringToTreeNode(string input) {
+    trimLeftTrailingSpaces(input);
+    trimRightTrailingSpaces(input);
+    input = input.substr(1, input.length() - 2);
+    if (!input.size()) {
+        return nullptr;
+    }
+
+    string item;
+    stringstream ss;
+    ss.str(input);
+
+    getline(ss, item, ',');
+    TreeNode* root = new TreeNode(stoi(item));
+    queue<TreeNode*> nodeQueue;
+    nodeQueue.push(root);
+
+    while (true) {
+        TreeNode* node = nodeQueue.front();
+        nodeQueue.pop();
+
+        // 构建node左孩子节点
+        if (!getline(ss, item, ',')) {
+            break;
+        }
+
+        trimLeftTrailingSpaces(item);
+        if (item != "null") {
+            int leftNumber = stoi(item);
+            node->left = new TreeNode(leftNumber);
+            nodeQueue.push(node->left);
+        }
+
+        // 构建node右孩子节点
+        if (!getline(ss, item, ',')) {
+            break;
+        }
+
+        trimLeftTrailingSpaces(item);
+        if (item != "null") {
+            int rightNumber = stoi(item);
+            node->right = new TreeNode(rightNumber);
+            nodeQueue.push(node->right);
+        }
+    }
+    return root;
+}
 
 int main() {
     string line;
