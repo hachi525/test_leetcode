@@ -247,6 +247,18 @@ build CMakeFiles/Test4.dir/L2102_SORTracker.cpp.obj: CXX_COMPILER__Test4_Debug F
   OBJECT_DIR = CMakeFiles\Test4.dir
   OBJECT_FILE_DIR = CMakeFiles\Test4.dir
 
+build CMakeFiles/Test4.dir/L687_longestUnivaluePath.cpp.obj: CXX_COMPILER__Test4_Debug F$:/Clion/Project/L687_longestUnivaluePath.cpp || cmake_object_order_depends_target_Test4
+  DEP_FILE = CMakeFiles\Test4.dir\L687_longestUnivaluePath.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Test4.dir
+  OBJECT_FILE_DIR = CMakeFiles\Test4.dir
+
+build CMakeFiles/Test4.dir/L124_maxPathSum.cpp.obj: CXX_COMPILER__Test4_Debug F$:/Clion/Project/L124_maxPathSum.cpp || cmake_object_order_depends_target_Test4
+  DEP_FILE = CMakeFiles\Test4.dir\L124_maxPathSum.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Test4.dir
+  OBJECT_FILE_DIR = CMakeFiles\Test4.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Test4
@@ -255,7 +267,7 @@ build CMakeFiles/Test4.dir/L2102_SORTracker.cpp.obj: CXX_COMPILER__Test4_Debug F
 #############################################
 # Link the executable Test4.exe
 
-build Test4.exe: CXX_EXECUTABLE_LINKER__Test4_Debug CMakeFiles/Test4.dir/L2102_SORTracker.cpp.obj
+build Test4.exe: CXX_EXECUTABLE_LINKER__Test4_Debug CMakeFiles/Test4.dir/L2102_SORTracker.cpp.obj CMakeFiles/Test4.dir/L687_longestUnivaluePath.cpp.obj CMakeFiles/Test4.dir/L124_maxPathSum.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test4.dir

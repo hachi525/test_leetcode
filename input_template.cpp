@@ -96,4 +96,4 @@ int main() {
         cout << out << endl;
     }
     return 0;
-}
+} 
