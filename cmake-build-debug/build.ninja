@@ -241,8 +241,8 @@ build Test2.exe: CXX_EXECUTABLE_LINKER__Test2_Debug CMakeFiles/Test2.dir/Test.cp
 
 build cmake_object_order_depends_target_Test4: phony || CMakeFiles/Test4.dir
 
-build CMakeFiles/Test4.dir/L2342_maximumSum.cpp.obj: CXX_COMPILER__Test4_Debug F$:/Clion/Project/L2342_maximumSum.cpp || cmake_object_order_depends_target_Test4
-  DEP_FILE = CMakeFiles\Test4.dir\L2342_maximumSum.cpp.obj.d
+build CMakeFiles/Test4.dir/L1592_reorderSpaces.cpp.obj: CXX_COMPILER__Test4_Debug F$:/Clion/Project/L1592_reorderSpaces.cpp || cmake_object_order_depends_target_Test4
+  DEP_FILE = CMakeFiles\Test4.dir\L1592_reorderSpaces.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Test4.dir
   OBJECT_FILE_DIR = CMakeFiles\Test4.dir
@@ -255,7 +255,7 @@ build CMakeFiles/Test4.dir/L2342_maximumSum.cpp.obj: CXX_COMPILER__Test4_Debug F
 #############################################
 # Link the executable Test4.exe
 
-build Test4.exe: CXX_EXECUTABLE_LINKER__Test4_Debug CMakeFiles/Test4.dir/L2342_maximumSum.cpp.obj
+build Test4.exe: CXX_EXECUTABLE_LINKER__Test4_Debug CMakeFiles/Test4.dir/L1592_reorderSpaces.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test4.dir
