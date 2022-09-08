@@ -166,6 +166,16 @@ bool testInput(){
     str = "123, 456";
     ss.str(str);
 
+    /// 测试cin后接getline()时，cin后回车被getline读取的问题
+    /* 解决办法：在cin和getline之间使用getline将回车读取 */
+    string s1;
+    int x;
+    cin >> x;
+    getline(cin, s1);
+    while(x--){
+        getline(cin, s1);
+        cout << s1 << endl;
+    }
     ///测试getline()
     /* 测试while(getline())按行循环输入 */
     // istream& getline ( istream &is , string &str , char delim );
@@ -211,7 +221,6 @@ bool testInput(){
 
 
     };
-
 
     // 3.stringstream
     stringstream sstream;
@@ -318,6 +327,8 @@ int main() {
 
     /* 7.测试流输入 */
     cout << boolalpha << testInput() << endl;
+
+
 
     return 0;
 }
