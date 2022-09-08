@@ -88,44 +88,8 @@ build Project.exe: CXX_EXECUTABLE_LINKER__Project_Debug CMakeFiles/Project.dir/m
 
 build cmake_object_order_depends_target_Test: phony || CMakeFiles/Test.dir
 
-build CMakeFiles/Test.dir/L1508_rangeSum.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion/Project/L1508_rangeSum.cpp || cmake_object_order_depends_target_Test
-  DEP_FILE = CMakeFiles\Test.dir\L1508_rangeSum.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test.dir
-
-build CMakeFiles/Test.dir/O115_sequenceReconstruction.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion/Project/O115_sequenceReconstruction.cpp || cmake_object_order_depends_target_Test
-  DEP_FILE = CMakeFiles\Test.dir\O115_sequenceReconstruction.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test.dir
-
-build CMakeFiles/Test.dir/Test.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion/Project/Test.cpp || cmake_object_order_depends_target_Test
-  DEP_FILE = CMakeFiles\Test.dir\Test.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test.dir
-
-build CMakeFiles/Test.dir/L593_validSquare.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion/Project/L593_validSquare.cpp || cmake_object_order_depends_target_Test
-  DEP_FILE = CMakeFiles\Test.dir\L593_validSquare.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test.dir
-
-build CMakeFiles/Test.dir/L952_largestComponentSize.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion/Project/L952_largestComponentSize.cpp || cmake_object_order_depends_target_Test
-  DEP_FILE = CMakeFiles\Test.dir\L952_largestComponentSize.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test.dir
-
-build CMakeFiles/Test.dir/L655_paintTree.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion/Project/L655_paintTree.cpp || cmake_object_order_depends_target_Test
-  DEP_FILE = CMakeFiles\Test.dir\L655_paintTree.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test.dir
-
-build CMakeFiles/Test.dir/test_epoll.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion/Project/test_epoll.cpp || cmake_object_order_depends_target_Test
-  DEP_FILE = CMakeFiles\Test.dir\test_epoll.cpp.obj.d
+build CMakeFiles/Test.dir/L667_constructArray.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion/Project/L667_constructArray.cpp || cmake_object_order_depends_target_Test
+  DEP_FILE = CMakeFiles\Test.dir\L667_constructArray.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Test.dir
   OBJECT_FILE_DIR = CMakeFiles\Test.dir
@@ -138,7 +102,7 @@ build CMakeFiles/Test.dir/test_epoll.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion
 #############################################
 # Link the executable Test.exe
 
-build Test.exe: CXX_EXECUTABLE_LINKER__Test_Debug CMakeFiles/Test.dir/L1508_rangeSum.cpp.obj CMakeFiles/Test.dir/O115_sequenceReconstruction.cpp.obj CMakeFiles/Test.dir/Test.cpp.obj CMakeFiles/Test.dir/L593_validSquare.cpp.obj CMakeFiles/Test.dir/L952_largestComponentSize.cpp.obj CMakeFiles/Test.dir/L655_paintTree.cpp.obj CMakeFiles/Test.dir/test_epoll.cpp.obj
+build Test.exe: CXX_EXECUTABLE_LINKER__Test_Debug CMakeFiles/Test.dir/L667_constructArray.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test.dir
@@ -241,8 +205,8 @@ build Test2.exe: CXX_EXECUTABLE_LINKER__Test2_Debug CMakeFiles/Test2.dir/Test.cp
 
 build cmake_object_order_depends_target_Test4: phony || CMakeFiles/Test4.dir
 
-build CMakeFiles/Test4.dir/L1592_reorderSpaces.cpp.obj: CXX_COMPILER__Test4_Debug F$:/Clion/Project/L1592_reorderSpaces.cpp || cmake_object_order_depends_target_Test4
-  DEP_FILE = CMakeFiles\Test4.dir\L1592_reorderSpaces.cpp.obj.d
+build CMakeFiles/Test4.dir/huawei_DP_Soldier.cpp.obj: CXX_COMPILER__Test4_Debug F$:/Clion/Project/huawei_DP_Soldier.cpp || cmake_object_order_depends_target_Test4
+  DEP_FILE = CMakeFiles\Test4.dir\huawei_DP_Soldier.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Test4.dir
   OBJECT_FILE_DIR = CMakeFiles\Test4.dir
@@ -255,7 +219,7 @@ build CMakeFiles/Test4.dir/L1592_reorderSpaces.cpp.obj: CXX_COMPILER__Test4_Debu
 #############################################
 # Link the executable Test4.exe
 
-build Test4.exe: CXX_EXECUTABLE_LINKER__Test4_Debug CMakeFiles/Test4.dir/L1592_reorderSpaces.cpp.obj
+build Test4.exe: CXX_EXECUTABLE_LINKER__Test4_Debug CMakeFiles/Test4.dir/huawei_DP_Soldier.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test4.dir
