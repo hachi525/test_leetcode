@@ -145,6 +145,12 @@ build CMakeFiles/Test1.dir/L793_premiageSize.cpp.obj: CXX_COMPILER__Test1_Debug 
   OBJECT_DIR = CMakeFiles\Test1.dir
   OBJECT_FILE_DIR = CMakeFiles\Test1.dir
 
+build CMakeFiles/Test1.dir/L670_maximumSwap.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/L670_maximumSwap.cpp || cmake_object_order_depends_target_Test1
+  DEP_FILE = CMakeFiles\Test1.dir\L670_maximumSwap.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Test1.dir
+  OBJECT_FILE_DIR = CMakeFiles\Test1.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Test1
@@ -153,7 +159,7 @@ build CMakeFiles/Test1.dir/L793_premiageSize.cpp.obj: CXX_COMPILER__Test1_Debug 
 #############################################
 # Link the executable Test1.exe
 
-build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L565_arrayNesting.cpp.obj CMakeFiles/Test1.dir/socketTest.cpp.obj CMakeFiles/Test1.dir/L782_movesToChessboard.cpp.obj CMakeFiles/Test1.dir/L793_premiageSize.cpp.obj
+build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L565_arrayNesting.cpp.obj CMakeFiles/Test1.dir/socketTest.cpp.obj CMakeFiles/Test1.dir/L782_movesToChessboard.cpp.obj CMakeFiles/Test1.dir/L793_premiageSize.cpp.obj CMakeFiles/Test1.dir/L670_maximumSwap.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test1.dir

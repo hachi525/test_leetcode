@@ -38,14 +38,14 @@ void add_Edge(int u, int v, int w){
     head[u] = cnt ++;
 }
 
-/* 遍历 */
 void traverse(){
-    for(int i = 1; i <= N; i ++){
-        for(int j = head[i]; ~j; j = edge[j].next){
+    for(int i = 1; i <= N; i ++){ //i为顶点的值，head[i]存的是第一条边的
+        for (int j = head[i]; ~j; j = edge[j].next) {   //j为结点i的边在边数组edge中的下标
             cout << "start = " << i << ", end = " << edge[j].to << ", weight = " << edge[j].w << endl;
         }
     }
 }
+
 
 int h[N], ne[2*N], e[2*N], w[2*N];
 int idx = 0;
@@ -55,9 +55,9 @@ void Init(){
 
 void add (int u, int v, int weight){
     e[idx] = v;     // 弧头节点v
-    w[idx] = weight;
-    ne[idx] = h[u]; // 新的边指向
-    h[u] = idx++;
+    w[idx] = weight;// 边的权值w
+    ne[idx] = h[u]; // 新的边指向，
+    h[u] = idx++;   // 顶点u的第一条边在边数组中的下标更新
 }
 
 void traverse1(){

@@ -186,8 +186,6 @@ bool testInput(){
             break;
         }
         cout << "str's num: " << stoi(str) << ", type: " << typeid(stoi(str)).name() << endl;
-
-
     }
 
 
@@ -198,6 +196,7 @@ bool testInput(){
      *  `数据类型转换
      *  `字符串拼接+清空
      * */
+
     // 1.istringstream
     // istringstream 只支持 >> 操作符
     istringstream iss;
@@ -211,6 +210,7 @@ bool testInput(){
             }
         }
     };
+
     // 2.ostringstream
     // ostringstream 只支持 << 操作符
     ostringstream oss;
@@ -294,6 +294,59 @@ bool testInput(){
     return true;
 }
 
+///测试const修饰成员函数
+class test{
+private:
+    int m_age;
+public:
+    void setAge(int age){
+        m_age = age;
+    }
+
+/*    //const修饰成员函数体
+    void setAgeConst(int age)const{
+        m_age = age;    //不能修改调用该函数的数据成员
+        getAge();       // 不能调用非const的成员函数
+    }
+
+    // const修饰引用形参
+    void setAge(const int& age){
+        age = 10;       // 不能在函数体内对该形参进行更改
+        m_age = age;
+    }*/
+
+    const int getAge(){
+        return m_age;
+    }
+
+    void showAge(){
+        cout << "Age: " << m_age << endl;
+    }
+
+};
+
+
+const int N = 100010;
+int idx = 0;
+int h[N], ne[2*N], w[2*N], e[2*N];
+
+void add(int u, int v, int weight){
+    e[idx] = v;
+    ne[idx] = h[u];
+    w[idx] = weight;
+    h[u] = idx++;
+}
+
+void traverse(){
+    for(int i = 1; i <= N; i ++){
+        for(int j = h[i]; ~j; j = ne[j]){
+            cout << "边的权重： " << w[j] << ", 边的下标：" << j << ", 结点" << i << "， 邻居顶点：" << e[j] << endl;
+        }
+    }
+}
+
+
+
 int main() {
     /*1.任何成员对象的构造函数按照声明顺序初始化*/
 //    Base obj(98);
@@ -326,9 +379,7 @@ int main() {
 //    _builtin_popcount_
 
     /* 7.测试流输入 */
-    cout << boolalpha << testInput() << endl;
-
-
+//    cout << boolalpha << testInput() << endl;
 
     return 0;
 }
