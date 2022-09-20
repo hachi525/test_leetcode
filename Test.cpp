@@ -2,8 +2,9 @@
 // Created by admin on 2022/7/28.
 //
 
-
+#define def_name(...) def_body(__VA_ARGS__)
 #include "Test.h"
+#define ages 200
 
 class Test{
 public:
@@ -22,6 +23,14 @@ public:
         return m_value*=2;
     }
 };
+
+///测试auto作为函数返回值类型
+template<typename _Tx, typename _Ty>
+auto multiply(_Tx x, _Ty y)-> decltype( x*y){
+    return x*y;
+}
+
+
 
 void test(){
     /* 测试unordered_map */
@@ -325,7 +334,7 @@ public:
 
 };
 
-
+// 链式前向星
 const int N = 100010;
 int idx = 0;
 int h[N], ne[2*N], w[2*N], e[2*N];
@@ -345,9 +354,120 @@ void traverse(){
     }
 }
 
+/// 测试constexpr修饰类的成员函数
+class constexprTest{
+private:
+    int age;
+public:
+    // constexpr修饰构造函数时，函数体必须为空
+    constexpr constexprTest(int age):age(age){}
+    constexpr int getAge(){
+        return age;
+    }
+};
+
+struct mtType{
+    const char* name;
+    int age;
+};
+template<typename T>
+constexpr T display(T t){
+    return t;
+}
+void mtTypeTest(){
+    struct mtType mt{"zhangsan", 18};
+    cout << mt.age << mt.name << endl;
+
+    constexpr mtType mt1{"lisi", 18};
+    cout << mt1.age << mt1.name << endl;
+}
+
+/// 测试const修饰
+class constTest{
+private:
+    const int a; int const a1;
+    const int* b; int const* b1; int* const b2;
+
+public:
+    int const func(const int x) const {return x;}
+};
+
+
+/// 测试function #include <functional>
+struct Foo{
+public:
+    Foo(int num):num_(num){}
+
+    void print_add(int a)const {cout << a + num_ << endl; }
+private:
+    int num_;
+};
+
+struct printNum{
+    void operator()(int num){ cout << num << endl;}
+};
+void print_Num(int num){
+    cout << num << endl;
+}
+
+void functionTest(){
+    // 普通函数
+    function<void(int)> f_display = print_Num;
+    f_display(-1);
+
+    // lambda匿名函数
+    function<void()> f_display_2 = [](){ print_Num(42); };
+    f_display_2();
+
+    // 存储到成员函数的调用
+    function<void(const Foo&, int)> f_display_member = &Foo::print_add;
+    const Foo foo(50);
+    f_display_member(foo, 20);
+    f_display_member(90, 20);
+
+    // struct函数对象的调用
+    function<void(int)> f_display_3 = printNum();
+    f_display_3(18);
+}
+
+/// 可变参数模板类，Values是模板参数包
+template <typename T, typename ...Values>
+class Tuple{
+
+};
+
+template <typename ... Values>
+void fun (Values... values){
+
+}
+
+
+/// 测试initializer_list
+enum Gender{
+    boy, girl
+};
+
+class People{
+public:
+    People(initializer_list<pair<string, Gender>> l){
+        auto i = l.begin();
+        for( ; i!= l.begin(); ++i)
+            data.emplace_back(*i);
+    }
+private:
+    vector<pair<string, Gender>> data;
+};
+People ship2012 = {{"zhangsan", boy}, {"lisi", girl}};
+
 
 
 int main() {
+    constexpr constexprTest constexprTest{3};
+    auto a = '123';
+    auto b = '123';
+    cout  <<"a+b: " <<  a + b << endl;
+
+//    functionTest();
     /*1.任何成员对象的构造函数按照声明顺序初始化*/
 //    Base obj(98);
 //    cout<< obj.get_j()<< " , "  << obj.get_i() ;

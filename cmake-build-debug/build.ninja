@@ -61,6 +61,12 @@ build CMakeFiles/Project.dir/Test/graph/Union_Find.cpp.obj: CXX_COMPILER__Projec
   OBJECT_DIR = CMakeFiles\Project.dir
   OBJECT_FILE_DIR = CMakeFiles\Project.dir\Test\graph
 
+build CMakeFiles/Project.dir/L850_rectangleArea.cpp.obj: CXX_COMPILER__Project_Debug F$:/Clion/Project/L850_rectangleArea.cpp || cmake_object_order_depends_target_Project
+  DEP_FILE = CMakeFiles\Project.dir\L850_rectangleArea.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\Project.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Project
@@ -69,7 +75,7 @@ build CMakeFiles/Project.dir/Test/graph/Union_Find.cpp.obj: CXX_COMPILER__Projec
 #############################################
 # Link the executable Project.exe
 
-build Project.exe: CXX_EXECUTABLE_LINKER__Project_Debug CMakeFiles/Project.dir/main.cpp.obj CMakeFiles/Project.dir/Test/graph/Union_Find.cpp.obj
+build Project.exe: CXX_EXECUTABLE_LINKER__Project_Debug CMakeFiles/Project.dir/main.cpp.obj CMakeFiles/Project.dir/Test/graph/Union_Find.cpp.obj CMakeFiles/Project.dir/L850_rectangleArea.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Project.dir
@@ -121,32 +127,8 @@ build Test.exe: CXX_EXECUTABLE_LINKER__Test_Debug CMakeFiles/Test.dir/L667_const
 
 build cmake_object_order_depends_target_Test1: phony || CMakeFiles/Test1.dir
 
-build CMakeFiles/Test1.dir/L565_arrayNesting.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/L565_arrayNesting.cpp || cmake_object_order_depends_target_Test1
-  DEP_FILE = CMakeFiles\Test1.dir\L565_arrayNesting.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test1.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test1.dir
-
-build CMakeFiles/Test1.dir/socketTest.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/socketTest.cpp || cmake_object_order_depends_target_Test1
-  DEP_FILE = CMakeFiles\Test1.dir\socketTest.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test1.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test1.dir
-
-build CMakeFiles/Test1.dir/L782_movesToChessboard.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/L782_movesToChessboard.cpp || cmake_object_order_depends_target_Test1
-  DEP_FILE = CMakeFiles\Test1.dir\L782_movesToChessboard.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test1.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test1.dir
-
-build CMakeFiles/Test1.dir/L793_premiageSize.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/L793_premiageSize.cpp || cmake_object_order_depends_target_Test1
-  DEP_FILE = CMakeFiles\Test1.dir\L793_premiageSize.cpp.obj.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test1.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test1.dir
-
-build CMakeFiles/Test1.dir/L670_maximumSwap.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/L670_maximumSwap.cpp || cmake_object_order_depends_target_Test1
-  DEP_FILE = CMakeFiles\Test1.dir\L670_maximumSwap.cpp.obj.d
+build CMakeFiles/Test1.dir/L672_flipLights.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/L672_flipLights.cpp || cmake_object_order_depends_target_Test1
+  DEP_FILE = CMakeFiles\Test1.dir\L672_flipLights.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Test1.dir
   OBJECT_FILE_DIR = CMakeFiles\Test1.dir
@@ -159,7 +141,7 @@ build CMakeFiles/Test1.dir/L670_maximumSwap.cpp.obj: CXX_COMPILER__Test1_Debug F
 #############################################
 # Link the executable Test1.exe
 
-build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L565_arrayNesting.cpp.obj CMakeFiles/Test1.dir/socketTest.cpp.obj CMakeFiles/Test1.dir/L782_movesToChessboard.cpp.obj CMakeFiles/Test1.dir/L793_premiageSize.cpp.obj CMakeFiles/Test1.dir/L670_maximumSwap.cpp.obj
+build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L672_flipLights.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test1.dir
