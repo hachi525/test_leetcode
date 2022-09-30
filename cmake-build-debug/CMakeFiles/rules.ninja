@@ -33,7 +33,7 @@ rule CXX_EXECUTABLE_LINKER__Project_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Test_Debug
+rule CXX_COMPILER__Thread_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = "F:\JetBrains\CLion 2022.1.2\bin\mingw\bin\g++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -43,7 +43,7 @@ rule CXX_COMPILER__Test_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__Test_Debug
+rule CXX_EXECUTABLE_LINKER__Thread_Debug
   command = cmd.exe /C "$PRE_LINK && "F:\JetBrains\CLion 2022.1.2\bin\mingw\bin\g++.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -71,7 +71,7 @@ rule CXX_EXECUTABLE_LINKER__Test1_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Test2_Debug
+rule CXX_COMPILER__Daily_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = "F:\JetBrains\CLion 2022.1.2\bin\mingw\bin\g++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -81,7 +81,7 @@ rule CXX_COMPILER__Test2_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__Test2_Debug
+rule CXX_EXECUTABLE_LINKER__Daily_Debug
   command = cmd.exe /C "$PRE_LINK && "F:\JetBrains\CLion 2022.1.2\bin\mingw\bin\g++.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -90,7 +90,7 @@ rule CXX_EXECUTABLE_LINKER__Test2_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Test4_Debug
+rule CXX_COMPILER__shuati_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = "F:\JetBrains\CLion 2022.1.2\bin\mingw\bin\g++.exe" $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -100,7 +100,7 @@ rule CXX_COMPILER__Test4_Debug
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__Test4_Debug
+rule CXX_EXECUTABLE_LINKER__shuati_Debug
   command = cmd.exe /C "$PRE_LINK && "F:\JetBrains\CLion 2022.1.2\bin\mingw\bin\g++.exe" $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT

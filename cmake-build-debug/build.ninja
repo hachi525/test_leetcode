@@ -86,37 +86,37 @@ build Project.exe: CXX_EXECUTABLE_LINKER__Project_Debug CMakeFiles/Project.dir/m
   TARGET_PDB = Project.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Test
+# Object build statements for EXECUTABLE target Thread
 
 
 #############################################
-# Order-only phony target for Test
+# Order-only phony target for Thread
 
-build cmake_object_order_depends_target_Test: phony || CMakeFiles/Test.dir
+build cmake_object_order_depends_target_Thread: phony || CMakeFiles/Thread.dir
 
-build CMakeFiles/Test.dir/L667_constructArray.cpp.obj: CXX_COMPILER__Test_Debug F$:/Clion/Project/L667_constructArray.cpp || cmake_object_order_depends_target_Test
-  DEP_FILE = CMakeFiles\Test.dir\L667_constructArray.cpp.obj.d
+build CMakeFiles/Thread.dir/Thread_Test.cpp.obj: CXX_COMPILER__Thread_Debug F$:/Clion/Project/Thread_Test.cpp || cmake_object_order_depends_target_Thread
+  DEP_FILE = CMakeFiles\Thread.dir\Thread_Test.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test.dir
+  OBJECT_DIR = CMakeFiles\Thread.dir
+  OBJECT_FILE_DIR = CMakeFiles\Thread.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Test
+# Link build statements for EXECUTABLE target Thread
 
 
 #############################################
-# Link the executable Test.exe
+# Link the executable Thread.exe
 
-build Test.exe: CXX_EXECUTABLE_LINKER__Test_Debug CMakeFiles/Test.dir/L667_constructArray.cpp.obj
+build Thread.exe: CXX_EXECUTABLE_LINKER__Thread_Debug CMakeFiles/Thread.dir/Thread_Test.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Test.dir
+  OBJECT_DIR = CMakeFiles\Thread.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Test.exe
-  TARGET_IMPLIB = libTest.dll.a
-  TARGET_PDB = Test.exe.dbg
+  TARGET_FILE = Thread.exe
+  TARGET_IMPLIB = libThread.dll.a
+  TARGET_PDB = Thread.exe.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target Test1
@@ -127,8 +127,8 @@ build Test.exe: CXX_EXECUTABLE_LINKER__Test_Debug CMakeFiles/Test.dir/L667_const
 
 build cmake_object_order_depends_target_Test1: phony || CMakeFiles/Test1.dir
 
-build CMakeFiles/Test1.dir/L672_flipLights.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/L672_flipLights.cpp || cmake_object_order_depends_target_Test1
-  DEP_FILE = CMakeFiles\Test1.dir\L672_flipLights.cpp.obj.d
+build CMakeFiles/Test1.dir/L1640_canFormArray.cpp.obj: CXX_COMPILER__Test1_Debug F$:/Clion/Project/L1640_canFormArray.cpp || cmake_object_order_depends_target_Test1
+  DEP_FILE = CMakeFiles\Test1.dir\L1640_canFormArray.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\Test1.dir
   OBJECT_FILE_DIR = CMakeFiles\Test1.dir
@@ -141,7 +141,7 @@ build CMakeFiles/Test1.dir/L672_flipLights.cpp.obj: CXX_COMPILER__Test1_Debug F$
 #############################################
 # Link the executable Test1.exe
 
-build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L672_flipLights.cpp.obj
+build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L1640_canFormArray.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Test1.dir
@@ -152,70 +152,70 @@ build Test1.exe: CXX_EXECUTABLE_LINKER__Test1_Debug CMakeFiles/Test1.dir/L672_fl
   TARGET_PDB = Test1.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Test2
+# Object build statements for EXECUTABLE target Daily
 
 
 #############################################
-# Order-only phony target for Test2
+# Order-only phony target for Daily
 
-build cmake_object_order_depends_target_Test2: phony || CMakeFiles/Test2.dir
+build cmake_object_order_depends_target_Daily: phony || CMakeFiles/Daily.dir
 
-build CMakeFiles/Test2.dir/Test.cpp.obj: CXX_COMPILER__Test2_Debug F$:/Clion/Project/Test.cpp || cmake_object_order_depends_target_Test2
-  DEP_FILE = CMakeFiles\Test2.dir\Test.cpp.obj.d
+build CMakeFiles/Daily.dir/Test.cpp.obj: CXX_COMPILER__Daily_Debug F$:/Clion/Project/Test.cpp || cmake_object_order_depends_target_Daily
+  DEP_FILE = CMakeFiles\Daily.dir\Test.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test2.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test2.dir
+  OBJECT_DIR = CMakeFiles\Daily.dir
+  OBJECT_FILE_DIR = CMakeFiles\Daily.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Test2
+# Link build statements for EXECUTABLE target Daily
 
 
 #############################################
-# Link the executable Test2.exe
+# Link the executable Daily.exe
 
-build Test2.exe: CXX_EXECUTABLE_LINKER__Test2_Debug CMakeFiles/Test2.dir/Test.cpp.obj
+build Daily.exe: CXX_EXECUTABLE_LINKER__Daily_Debug CMakeFiles/Daily.dir/Test.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Test2.dir
+  OBJECT_DIR = CMakeFiles\Daily.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Test2.exe
-  TARGET_IMPLIB = libTest2.dll.a
-  TARGET_PDB = Test2.exe.dbg
+  TARGET_FILE = Daily.exe
+  TARGET_IMPLIB = libDaily.dll.a
+  TARGET_PDB = Daily.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Test4
+# Object build statements for EXECUTABLE target shuati
 
 
 #############################################
-# Order-only phony target for Test4
+# Order-only phony target for shuati
 
-build cmake_object_order_depends_target_Test4: phony || CMakeFiles/Test4.dir
+build cmake_object_order_depends_target_shuati: phony || CMakeFiles/shuati.dir
 
-build CMakeFiles/Test4.dir/huawei_DP_Soldier.cpp.obj: CXX_COMPILER__Test4_Debug F$:/Clion/Project/huawei_DP_Soldier.cpp || cmake_object_order_depends_target_Test4
-  DEP_FILE = CMakeFiles\Test4.dir\huawei_DP_Soldier.cpp.obj.d
+build CMakeFiles/shuati.dir/bishi_test.cpp.obj: CXX_COMPILER__shuati_Debug F$:/Clion/Project/bishi_test.cpp || cmake_object_order_depends_target_shuati
+  DEP_FILE = CMakeFiles\shuati.dir\bishi_test.cpp.obj.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\Test4.dir
-  OBJECT_FILE_DIR = CMakeFiles\Test4.dir
+  OBJECT_DIR = CMakeFiles\shuati.dir
+  OBJECT_FILE_DIR = CMakeFiles\shuati.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Test4
+# Link build statements for EXECUTABLE target shuati
 
 
 #############################################
-# Link the executable Test4.exe
+# Link the executable shuati.exe
 
-build Test4.exe: CXX_EXECUTABLE_LINKER__Test4_Debug CMakeFiles/Test4.dir/huawei_DP_Soldier.cpp.obj
+build shuati.exe: CXX_EXECUTABLE_LINKER__shuati_Debug CMakeFiles/shuati.dir/bishi_test.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Test4.dir
+  OBJECT_DIR = CMakeFiles\shuati.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Test4.exe
-  TARGET_IMPLIB = libTest4.dll.a
-  TARGET_PDB = Test4.exe.dbg
+  TARGET_FILE = shuati.exe
+  TARGET_IMPLIB = libshuati.dll.a
+  TARGET_PDB = shuati.exe.dbg
 
 
 #############################################
@@ -243,15 +243,15 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Project: phony Project.exe
+build Daily: phony Daily.exe
 
-build Test: phony Test.exe
+build Project: phony Project.exe
 
 build Test1: phony Test1.exe
 
-build Test2: phony Test2.exe
+build Thread: phony Thread.exe
 
-build Test4: phony Test4.exe
+build shuati: phony shuati.exe
 
 # =============================================================================
 # Folder targets.
@@ -261,7 +261,7 @@ build Test4: phony Test4.exe
 #############################################
 # Folder: F:/Clion/Project/cmake-build-debug
 
-build all: phony Project.exe Test.exe Test1.exe Test2.exe Test4.exe
+build all: phony Project.exe Thread.exe Test1.exe Daily.exe shuati.exe
 
 # =============================================================================
 # Built-in targets

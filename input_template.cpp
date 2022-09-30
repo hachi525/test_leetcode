@@ -36,6 +36,7 @@ void trimRightTrailingSpaces(string &input) {
         return !isspace(ch);
     }).base(), input.end());
 }
+
 /*
  * input: 数组型字符串，如"[1, 2, 3]"
  * */
@@ -64,6 +65,63 @@ vector<int> stringToIntegerVector(string input) {   // string - vector<int>
         output.push_back(stoi(item));
     }
     return output;
+}
+
+/*
+ * 单行字符串input: 二维数组型字符串，如"[[1,2,3], [1,2,3], [3,3,4]]"
+ * */
+vector<vector<int> > stringToVector(string input){
+    vector<vector<int> > output;
+    trimLeftTrailingSpaces(input);
+    trimRightTrailingSpaces(input);
+    input = input.substr(1, input.length() - 2);
+    input = "," + input;
+    stringstream ss(input);
+    char delim = ',';
+    char delim1 = ']';
+    string item;
+    while (getline(ss, item, delim1)) {
+        vector<int> temp;
+        item = item.substr(2, item.length()-2);
+        stringstream ss1(item);
+        string num;
+        while(getline(ss1, num, delim)){
+            temp.emplace_back(stoi(num));
+        }
+        output.emplace_back(temp);
+    }
+    return output;
+}
+/*
+ * 多行输入字符串转二维数组
+ * 如：
+ *  [
+ *      [1,2,3],
+ *      [2,3,4],
+ *      [3,4,5]
+ *  ]
+ * */
+void inputToVector(vector<vector<int>>& input){
+    int cnt = 0;
+    string line;
+    char delim = ',';
+    while(getline(cin, line)){
+        trimLeftTrailingSpaces(line);
+        trimRightTrailingSpaces(line);
+        if(line == "]") break;
+        if(line.size() == 1)    continue;
+        if(line[line.length()-1] == ',')
+            line = line.substr(1, line.length()-3);
+        else
+            line = line.substr(1, line.length()-2);
+        stringstream ss(line);
+        string tempString;
+        vector<int> tempVector;
+        while(getline(ss, tempString, delim)){
+            tempVector.emplace_back(stoi(tempString));
+        }
+        input.emplace_back(tempVector);
+    }
 }
 
 string boolToString(bool input) {   // bool - string
